@@ -9,11 +9,23 @@
 /* Begin PBXBuildFile section */
 		3A0A405D22B91C39002199DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A405C22B91C39002199DF /* AppDelegate.swift */; };
 		3A0A405F22B91C39002199DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A405E22B91C39002199DF /* SceneDelegate.swift */; };
-		3A0A406122B91C39002199DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A406022B91C39002199DF /* ViewController.swift */; };
-		3A0A406422B91C39002199DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A406222B91C39002199DF /* Main.storyboard */; };
+		3A0A406122B91C39002199DF /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A406022B91C39002199DF /* BeerListViewController.swift */; };
+		3A0A406422B91C39002199DF /* BeerList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A406222B91C39002199DF /* BeerList.storyboard */; };
 		3A0A406622B91C3D002199DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A406522B91C3D002199DF /* Assets.xcassets */; };
 		3A0A406922B91C3D002199DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A406722B91C3D002199DF /* LaunchScreen.storyboard */; };
 		3A0A407422B91C3E002199DF /* i_PunksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A407322B91C3E002199DF /* i_PunksTests.swift */; };
+		3A0A408322B952CF002199DF /* BeerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A408222B952CF002199DF /* BeerListViewModel.swift */; };
+		3ADE0D8E22BAA6080011DEEB /* BeerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE0D8D22BAA6080011DEEB /* BeerUseCase.swift */; };
+		3ADE0D9022BAA6450011DEEB /* BeerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE0D8F22BAA6450011DEEB /* BeerRepository.swift */; };
+		3ADE0D9222BAA6800011DEEB /* BeerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE0D9122BAA6800011DEEB /* BeerDataSource.swift */; };
+		3ADE0D9422BAA8F50011DEEB /* BeerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE0D9322BAA8F50011DEEB /* BeerApi.swift */; };
+		3ADE0D9722BAA9610011DEEB /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE0D9622BAA9610011DEEB /* Beer.swift */; };
+		3ADE0D9A22BAA97E0011DEEB /* BeerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE0D9922BAA97E0011DEEB /* BeerResponse.swift */; };
+		3ADE0D9C22BAABBF0011DEEB /* VolumeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE0D9B22BAABBF0011DEEB /* VolumeResponse.swift */; };
+		3ADE0DA022BB4A5B0011DEEB /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0A408722BAA1E5002199DF /* RxSwift.framework */; };
+		3ADE0DA122BB4A5B0011DEEB /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A0A408722BAA1E5002199DF /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3ADE0DA222BB4A6F0011DEEB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADE0D9D22BB451D0011DEEB /* Alamofire.framework */; };
+		3ADE0DA322BB4A6F0011DEEB /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADE0D9D22BB451D0011DEEB /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,18 +38,43 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3A0A408A22BAA1E5002199DF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3ADE0DA122BB4A5B0011DEEB /* RxSwift.framework in Embed Frameworks */,
+				3ADE0DA322BB4A6F0011DEEB /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3A0A405922B91C39002199DF /* i-Punks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "i-Punks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A0A405C22B91C39002199DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A0A405E22B91C39002199DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A0A406022B91C39002199DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3A0A406322B91C39002199DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A0A406022B91C39002199DF /* BeerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewController.swift; sourceTree = "<group>"; };
+		3A0A406322B91C39002199DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BeerList.storyboard; sourceTree = "<group>"; };
 		3A0A406522B91C3D002199DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A0A406822B91C3D002199DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A0A406A22B91C3D002199DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A0A406F22B91C3E002199DF /* i-PunksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "i-PunksTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A0A407322B91C3E002199DF /* i_PunksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i_PunksTests.swift; sourceTree = "<group>"; };
 		3A0A407522B91C3E002199DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A0A408222B952CF002199DF /* BeerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewModel.swift; sourceTree = "<group>"; };
+		3A0A408722BAA1E5002199DF /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		3ADE0D8D22BAA6080011DEEB /* BeerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerUseCase.swift; sourceTree = "<group>"; };
+		3ADE0D8F22BAA6450011DEEB /* BeerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRepository.swift; sourceTree = "<group>"; };
+		3ADE0D9122BAA6800011DEEB /* BeerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDataSource.swift; sourceTree = "<group>"; };
+		3ADE0D9322BAA8F50011DEEB /* BeerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerApi.swift; sourceTree = "<group>"; };
+		3ADE0D9622BAA9610011DEEB /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		3ADE0D9922BAA97E0011DEEB /* BeerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerResponse.swift; sourceTree = "<group>"; };
+		3ADE0D9B22BAABBF0011DEEB /* VolumeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeResponse.swift; sourceTree = "<group>"; };
+		3ADE0D9D22BB451D0011DEEB /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ADE0DA022BB4A5B0011DEEB /* RxSwift.framework in Frameworks */,
+				3ADE0DA222BB4A6F0011DEEB /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +103,7 @@
 				3A0A405B22B91C39002199DF /* i-Punks */,
 				3A0A407222B91C3E002199DF /* i-PunksTests */,
 				3A0A405A22B91C39002199DF /* Products */,
+				3A0A408622BAA1E5002199DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,10 +119,13 @@
 		3A0A405B22B91C39002199DF /* i-Punks */ = {
 			isa = PBXGroup;
 			children = (
+				3ADE0D8B22BAA58D0011DEEB /* Infra */,
+				3ADE0D8A22BAA5730011DEEB /* Application */,
+				3ADE0D8922BAA5070011DEEB /* Domain */,
+				3A0A407F22B94F74002199DF /* UI */,
 				3A0A405C22B91C39002199DF /* AppDelegate.swift */,
 				3A0A405E22B91C39002199DF /* SceneDelegate.swift */,
-				3A0A406022B91C39002199DF /* ViewController.swift */,
-				3A0A406222B91C39002199DF /* Main.storyboard */,
+				3A0A406222B91C39002199DF /* BeerList.storyboard */,
 				3A0A406522B91C3D002199DF /* Assets.xcassets */,
 				3A0A406722B91C3D002199DF /* LaunchScreen.storyboard */,
 				3A0A406A22B91C3D002199DF /* Info.plist */,
@@ -99,6 +142,84 @@
 			path = "i-PunksTests";
 			sourceTree = "<group>";
 		};
+		3A0A407F22B94F74002199DF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3A0A408522B95464002199DF /* Detail */,
+				3A0A408422B95395002199DF /* List */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3A0A408422B95395002199DF /* List */ = {
+			isa = PBXGroup;
+			children = (
+				3A0A406022B91C39002199DF /* BeerListViewController.swift */,
+				3A0A408222B952CF002199DF /* BeerListViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		3A0A408522B95464002199DF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		3A0A408622BAA1E5002199DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3ADE0D9D22BB451D0011DEEB /* Alamofire.framework */,
+				3A0A408722BAA1E5002199DF /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3ADE0D8922BAA5070011DEEB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3ADE0D9522BAA92E0011DEEB /* model */,
+				3ADE0D8F22BAA6450011DEEB /* BeerRepository.swift */,
+				3ADE0D9122BAA6800011DEEB /* BeerDataSource.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3ADE0D8A22BAA5730011DEEB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3ADE0D8D22BAA6080011DEEB /* BeerUseCase.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3ADE0D8B22BAA58D0011DEEB /* Infra */ = {
+			isa = PBXGroup;
+			children = (
+				3ADE0D9822BAA96B0011DEEB /* model */,
+				3ADE0D9322BAA8F50011DEEB /* BeerApi.swift */,
+			);
+			path = Infra;
+			sourceTree = "<group>";
+		};
+		3ADE0D9522BAA92E0011DEEB /* model */ = {
+			isa = PBXGroup;
+			children = (
+				3ADE0D9622BAA9610011DEEB /* Beer.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		3ADE0D9822BAA96B0011DEEB /* model */ = {
+			isa = PBXGroup;
+			children = (
+				3ADE0D9922BAA97E0011DEEB /* BeerResponse.swift */,
+				3ADE0D9B22BAABBF0011DEEB /* VolumeResponse.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,6 +230,8 @@
 				3A0A405522B91C39002199DF /* Sources */,
 				3A0A405622B91C39002199DF /* Frameworks */,
 				3A0A405722B91C39002199DF /* Resources */,
+				3A0A408A22BAA1E5002199DF /* Embed Frameworks */,
+				3A0A408B22BAA1FB002199DF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -182,7 +305,7 @@
 			files = (
 				3A0A406922B91C3D002199DF /* LaunchScreen.storyboard in Resources */,
 				3A0A406622B91C3D002199DF /* Assets.xcassets in Resources */,
-				3A0A406422B91C39002199DF /* Main.storyboard in Resources */,
+				3A0A406422B91C39002199DF /* BeerList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,14 +318,44 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A0A408B22BAA1FB002199DF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3A0A405522B91C39002199DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A0A406122B91C39002199DF /* ViewController.swift in Sources */,
+				3ADE0D9422BAA8F50011DEEB /* BeerApi.swift in Sources */,
+				3ADE0D9722BAA9610011DEEB /* Beer.swift in Sources */,
+				3A0A406122B91C39002199DF /* BeerListViewController.swift in Sources */,
+				3ADE0D8E22BAA6080011DEEB /* BeerUseCase.swift in Sources */,
+				3ADE0D9A22BAA97E0011DEEB /* BeerResponse.swift in Sources */,
 				3A0A405D22B91C39002199DF /* AppDelegate.swift in Sources */,
+				3ADE0D9C22BAABBF0011DEEB /* VolumeResponse.swift in Sources */,
+				3ADE0D9222BAA6800011DEEB /* BeerDataSource.swift in Sources */,
+				3ADE0D9022BAA6450011DEEB /* BeerRepository.swift in Sources */,
 				3A0A405F22B91C39002199DF /* SceneDelegate.swift in Sources */,
+				3A0A408322B952CF002199DF /* BeerListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,12 +378,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3A0A406222B91C39002199DF /* Main.storyboard */ = {
+		3A0A406222B91C39002199DF /* BeerList.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3A0A406322B91C39002199DF /* Base */,
 			);
-			name = Main.storyboard;
+			name = BeerList.storyboard;
 			sourceTree = "<group>";
 		};
 		3A0A406722B91C3D002199DF /* LaunchScreen.storyboard */ = {
@@ -301,6 +454,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -354,6 +508,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -363,6 +518,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "i-Punks/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -380,6 +539,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "i-Punks/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
