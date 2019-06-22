@@ -15,6 +15,11 @@
 		3A0A406922B91C3D002199DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0A406722B91C3D002199DF /* LaunchScreen.storyboard */; };
 		3A0A407422B91C3E002199DF /* i_PunksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A407322B91C3E002199DF /* i_PunksTests.swift */; };
 		3A0A408322B952CF002199DF /* BeerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A408222B952CF002199DF /* BeerListViewModel.swift */; };
+		3A2993F922BE9222009016C9 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2993F822BE9222009016C9 /* Swinject.framework */; };
+		3A2993FA22BE9222009016C9 /* Swinject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2993F822BE9222009016C9 /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A2993FC22BE923B009016C9 /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2993FB22BE923B009016C9 /* SwinjectStoryboard.framework */; };
+		3A2993FD22BE923B009016C9 /* SwinjectStoryboard.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2993FB22BE923B009016C9 /* SwinjectStoryboard.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A29940022BE9A70009016C9 /* SwinjectStoryboard+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2993FF22BE9A70009016C9 /* SwinjectStoryboard+Setup.swift */; };
 		3ADE0D8E22BAA6080011DEEB /* BeerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE0D8D22BAA6080011DEEB /* BeerUseCase.swift */; };
 		3ADE0D9022BAA6450011DEEB /* BeerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE0D8F22BAA6450011DEEB /* BeerRepository.swift */; };
 		3ADE0D9222BAA6800011DEEB /* BeerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE0D9122BAA6800011DEEB /* BeerDataSource.swift */; };
@@ -45,6 +50,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				3A2993FD22BE923B009016C9 /* SwinjectStoryboard.framework in Embed Frameworks */,
+				3A2993FA22BE9222009016C9 /* Swinject.framework in Embed Frameworks */,
 				3ADE0DA122BB4A5B0011DEEB /* RxSwift.framework in Embed Frameworks */,
 				3ADE0DA322BB4A6F0011DEEB /* Alamofire.framework in Embed Frameworks */,
 			);
@@ -67,6 +74,9 @@
 		3A0A407522B91C3E002199DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A0A408222B952CF002199DF /* BeerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewModel.swift; sourceTree = "<group>"; };
 		3A0A408722BAA1E5002199DF /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		3A2993F822BE9222009016C9 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
+		3A2993FB22BE923B009016C9 /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
+		3A2993FF22BE9A70009016C9 /* SwinjectStoryboard+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Setup.swift"; sourceTree = "<group>"; };
 		3ADE0D8D22BAA6080011DEEB /* BeerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerUseCase.swift; sourceTree = "<group>"; };
 		3ADE0D8F22BAA6450011DEEB /* BeerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRepository.swift; sourceTree = "<group>"; };
 		3ADE0D9122BAA6800011DEEB /* BeerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDataSource.swift; sourceTree = "<group>"; };
@@ -82,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A2993FC22BE923B009016C9 /* SwinjectStoryboard.framework in Frameworks */,
+				3A2993F922BE9222009016C9 /* Swinject.framework in Frameworks */,
 				3ADE0DA022BB4A5B0011DEEB /* RxSwift.framework in Frameworks */,
 				3ADE0DA222BB4A6F0011DEEB /* Alamofire.framework in Frameworks */,
 			);
@@ -119,8 +131,9 @@
 		3A0A405B22B91C39002199DF /* i-Punks */ = {
 			isa = PBXGroup;
 			children = (
+				3A2993FE22BE9962009016C9 /* DI */,
 				3ADE0D8B22BAA58D0011DEEB /* Infra */,
-				3ADE0D8A22BAA5730011DEEB /* Application */,
+				3ADE0D8A22BAA5730011DEEB /* UseCase */,
 				3ADE0D8922BAA5070011DEEB /* Domain */,
 				3A0A407F22B94F74002199DF /* UI */,
 				3A0A405C22B91C39002199DF /* AppDelegate.swift */,
@@ -170,10 +183,20 @@
 		3A0A408622BAA1E5002199DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A2993FB22BE923B009016C9 /* SwinjectStoryboard.framework */,
+				3A2993F822BE9222009016C9 /* Swinject.framework */,
 				3ADE0D9D22BB451D0011DEEB /* Alamofire.framework */,
 				3A0A408722BAA1E5002199DF /* RxSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A2993FE22BE9962009016C9 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				3A2993FF22BE9A70009016C9 /* SwinjectStoryboard+Setup.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		3ADE0D8922BAA5070011DEEB /* Domain */ = {
@@ -186,12 +209,12 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		3ADE0D8A22BAA5730011DEEB /* Application */ = {
+		3ADE0D8A22BAA5730011DEEB /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
 				3ADE0D8D22BAA6080011DEEB /* BeerUseCase.swift */,
 			);
-			path = Application;
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		3ADE0D8B22BAA58D0011DEEB /* Infra */ = {
@@ -329,6 +352,8 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwinjectStoryboard.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -346,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ADE0D9422BAA8F50011DEEB /* BeerApi.swift in Sources */,
+				3A29940022BE9A70009016C9 /* SwinjectStoryboard+Setup.swift in Sources */,
 				3ADE0D9722BAA9610011DEEB /* Beer.swift in Sources */,
 				3A0A406122B91C39002199DF /* BeerListViewController.swift in Sources */,
 				3ADE0D8E22BAA6080011DEEB /* BeerUseCase.swift in Sources */,
