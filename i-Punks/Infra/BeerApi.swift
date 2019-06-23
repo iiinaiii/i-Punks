@@ -4,18 +4,19 @@ import RxSwift
 import Alamofire
 
 class BeerApi: BeerDataSource {
-    func searchBeer(page: Int) -> Single<Result<Beer,Error>> {
-        return Single<Result<Beer,Error>>.create{ singleEvent in
+    func searchBeerList(page: Int) -> Single<Result<Array<Beer>, Error>> {
+        return Single<Result<Array<Beer>, Error>>.create { singleEvent in
             let request = AF.request("https://httpbin.org/get").responseJSON { (response) in
                 switch response.result {
                 case .success(let data):
-                    let beerResponse = try? JSONDecoder().decode(BeerResponse.self, from: data as! Data)
-                    if(beerResponse == nil){
+                    let beerResponseList = try? JSONDecoder().decode([BeerResponse].self, from: data as! Data)
+                    if(beerResponseList == nil) {
                         singleEvent(.error(ApiError()))
-                    }else{
-                        singleEvent(.success(Result.success(beerResponse!.toBeer())))
+                    } else {
+                        let beerList = beerResponseList!.map({ $0.toBeer() })
+                        singleEvent(.success(Result.success(beerList)))
                     }
-                case .failure( _):
+                case .failure(_):
                     singleEvent(.error(ApiError()))
                 }
             }

@@ -1,10 +1,3 @@
-//
-//  i_PunksTests.swift
-//  i-PunksTests
-//
-//  Created by 石井直貴 on 2019/06/18.
-//  Copyright © 2019 Naoki Ishii. All rights reserved.
-//
 
 import XCTest
 @testable import i_Punks

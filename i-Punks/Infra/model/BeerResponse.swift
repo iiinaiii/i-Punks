@@ -1,7 +1,7 @@
 
 import Foundation
 
-struct BeerResponse : Codable{
+struct BeerResponse: Codable {
     let id: Int
     let name: String
     let tagline: String
@@ -22,7 +22,7 @@ struct BeerResponse : Codable{
     let brewers_tips: String
 }
 
-extension BeerResponse{
+extension BeerResponse {
     func toBeer() -> Beer {
         return Beer(
             id: id,

@@ -3,14 +3,14 @@ import UIKit
 import RxSwift
 
 class BeerListViewController: UIViewController {
-    
-    var viewModel:BeerListViewModel?
+
+    var viewModel: BeerListViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.view.backgroundColor = .blue
-        viewModel?.log()
+        viewModel?.fetchBeerList(page: 0)
     }
 }
 

@@ -3,5 +3,5 @@ import Foundation
 import RxSwift
 
 protocol BeerDataSource {
-    func searchBeer(page:Int) -> Single<Result<Beer, Error>>
+    func searchBeerList(page: Int) -> Single<Result<Array<Beer>, Error>>
 }
