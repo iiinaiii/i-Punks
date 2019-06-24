@@ -8,6 +8,7 @@ class BeerListViewController: UIViewController {
     var viewModel: BeerListViewModel?
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,14 @@ class BeerListViewController: UIViewController {
                 let abvLabel = cell.viewWithTag(4) as! UILabel
                 abvLabel.text = beer.abv
             }.disposed(by: disposeBag)
+
+        viewModel?.isLoading
+            .drive(
+                onNext: { (isLoading) in
+                    self.indicatorView.isHidden = !isLoading
+                    self.tableView.isHidden = isLoading
+                })
+            .disposed(by: disposeBag)
     }
 
     private func getImageByUrl(url: String) -> UIImage {

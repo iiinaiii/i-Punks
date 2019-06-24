@@ -6,15 +6,24 @@ import RxCocoa
 
 final class BeerListViewModel {
     let useCase: BeerUseCase
-    let beerList: Driver<Array<Beer>>
+
+    let _isLoading = BehaviorRelay<Bool>(value: false)
+    private lazy var _beerList = self.useCase.observeBeerList()
+        .do(
+            onNext: { (_) in self._isLoading.accept(false) },
+            onError: { (_) in self._isLoading.accept(false) }
+        )
+
+    lazy var isLoading = _isLoading.asDriver()
+    lazy var beerList = _beerList
+        .asDriver(onErrorDriveWith: Driver.empty())
 
     init(useCase: BeerUseCase) {
         self.useCase = useCase
-        beerList = self.useCase.observeBeerList()
-            .asDriver(onErrorDriveWith: Driver.empty())
     }
 
     func fetchBeerList(page: Int) {
+        _isLoading.accept(true)
         useCase.fetchBeerList(page: page)
     }
 }
