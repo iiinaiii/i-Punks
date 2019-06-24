@@ -20,6 +20,10 @@
 		3A2993FC22BE923B009016C9 /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2993FB22BE923B009016C9 /* SwinjectStoryboard.framework */; };
 		3A2993FD22BE923B009016C9 /* SwinjectStoryboard.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2993FB22BE923B009016C9 /* SwinjectStoryboard.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3A29940022BE9A70009016C9 /* SwinjectStoryboard+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2993FF22BE9A70009016C9 /* SwinjectStoryboard+Setup.swift */; };
+		3AAC575F22BF30280082C533 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAC575E22BF30280082C533 /* RxCocoa.framework */; };
+		3AAC576022BF30280082C533 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAC575E22BF30280082C533 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3AAC576222BF311E0082C533 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAC576122BF311D0082C533 /* RxRelay.framework */; };
+		3AAC576322BF311E0082C533 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAC576122BF311D0082C533 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3ADE0D8E22BAA6080011DEEB /* BeerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE0D8D22BAA6080011DEEB /* BeerUseCase.swift */; };
 		3ADE0D9022BAA6450011DEEB /* BeerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE0D8F22BAA6450011DEEB /* BeerRepository.swift */; };
 		3ADE0D9222BAA6800011DEEB /* BeerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE0D9122BAA6800011DEEB /* BeerDataSource.swift */; };
@@ -52,7 +56,9 @@
 			files = (
 				3A2993FD22BE923B009016C9 /* SwinjectStoryboard.framework in Embed Frameworks */,
 				3A2993FA22BE9222009016C9 /* Swinject.framework in Embed Frameworks */,
+				3AAC576322BF311E0082C533 /* RxRelay.framework in Embed Frameworks */,
 				3ADE0DA122BB4A5B0011DEEB /* RxSwift.framework in Embed Frameworks */,
+				3AAC576022BF30280082C533 /* RxCocoa.framework in Embed Frameworks */,
 				3ADE0DA322BB4A6F0011DEEB /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -77,6 +83,8 @@
 		3A2993F822BE9222009016C9 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		3A2993FB22BE923B009016C9 /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
 		3A2993FF22BE9A70009016C9 /* SwinjectStoryboard+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Setup.swift"; sourceTree = "<group>"; };
+		3AAC575E22BF30280082C533 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		3AAC576122BF311D0082C533 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		3ADE0D8D22BAA6080011DEEB /* BeerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerUseCase.swift; sourceTree = "<group>"; };
 		3ADE0D8F22BAA6450011DEEB /* BeerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRepository.swift; sourceTree = "<group>"; };
 		3ADE0D9122BAA6800011DEEB /* BeerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDataSource.swift; sourceTree = "<group>"; };
@@ -94,7 +102,9 @@
 			files = (
 				3A2993FC22BE923B009016C9 /* SwinjectStoryboard.framework in Frameworks */,
 				3A2993F922BE9222009016C9 /* Swinject.framework in Frameworks */,
+				3AAC576222BF311E0082C533 /* RxRelay.framework in Frameworks */,
 				3ADE0DA022BB4A5B0011DEEB /* RxSwift.framework in Frameworks */,
+				3AAC575F22BF30280082C533 /* RxCocoa.framework in Frameworks */,
 				3ADE0DA222BB4A6F0011DEEB /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +193,8 @@
 		3A0A408622BAA1E5002199DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AAC576122BF311D0082C533 /* RxRelay.framework */,
+				3AAC575E22BF30280082C533 /* RxCocoa.framework */,
 				3A2993FB22BE923B009016C9 /* SwinjectStoryboard.framework */,
 				3A2993F822BE9222009016C9 /* Swinject.framework */,
 				3ADE0D9D22BB451D0011DEEB /* Alamofire.framework */,
@@ -354,6 +366,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwinjectStoryboard.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 			);
 			outputFileListPaths = (
 			);

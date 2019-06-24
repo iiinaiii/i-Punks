@@ -13,14 +13,17 @@ class BeerRepository {
     func fetchBeerList(page: Int) {
         dataSource.searchBeerList(page: page)
             .subscribeOn(SerialDispatchQueueScheduler(qos: .default))
-            .subscribe(onSuccess: { result in
-                switch result {
-                case .success(let beerList):
-                    self.beerListSubject.onNext(beerList)
-                case .failure(let error):
-                    self.beerListSubject.onError(error)
-                }
-            }, onError: { error in
+            .subscribe(
+                onSuccess: { result in
+                    switch result {
+                    case .success(let beerList):
+                        self.beerListSubject.onNext(beerList)
+                    case .failure(let error):
+                        self.beerListSubject.onError(error)
+                    }
+
+                },
+                onError: { error in
                     self.beerListSubject.onError(error)
                 }).disposed(by: disposeBag)
     }

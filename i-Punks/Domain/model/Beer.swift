@@ -7,7 +7,7 @@ public struct Beer {
     let tagline: String
     let firstBrewed: String
     let description: String
-    let imageUrl: String
+    let imageUrl: String?
     let abv: String
     let ibu: String
     let targetOg: String

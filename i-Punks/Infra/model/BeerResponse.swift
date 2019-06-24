@@ -5,7 +5,7 @@ struct BeerResponse: Codable {
     let id: Int
     let name: String
     let tagline: String
-    let first_brewed: Date
+    let first_brewed: String?
     let description: String
     let image_url: String
     let abv: Float?
@@ -28,8 +28,7 @@ extension BeerResponse {
             id: id,
             name: name,
             tagline: tagline,
-            //TODO: DateFormat
-            firstBrewed: "monthUS yyyy",
+            firstBrewed: convertDate(inDateStr: first_brewed),
             description: description,
             imageUrl: image_url,
             abv: "\(abv.toStringOrDefault())%",
@@ -51,4 +50,19 @@ private extension Optional where Wrapped == Float {
     func toStringOrDefault() -> String {
         return self?.description ?? "-"
     }
+}
+
+private func convertDate(inDateStr: String?) -> String {
+    guard let dateStr = inDateStr else {
+        return "-"
+    }
+
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "MM/yyyy"
+    guard let date = dateFormatter.date(from: dateStr) else {
+        return "-"
+    }
+
+    dateFormatter.dateFormat = "MMMM yyyy"
+    return dateFormatter.string(from: date).uppercased()
 }
