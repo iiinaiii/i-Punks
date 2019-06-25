@@ -41,16 +41,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BrewedLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9b4-da-geB">
-                                                    <rect key="frame" x="88" y="40" width="120" height="18"/>
+                                                    <rect key="frame" x="88" y="40" width="140" height="18"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="120" id="Heu-nA-Pxu"/>
+                                                        <constraint firstAttribute="width" constant="140" id="Heu-nA-Pxu"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABVLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6R-eL-qLp">
-                                                    <rect key="frame" x="224" y="40" width="190" height="18"/>
+                                                    <rect key="frame" x="244" y="40" width="170" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" id="Osz-xl-xjK"/>
                                                     </constraints>
