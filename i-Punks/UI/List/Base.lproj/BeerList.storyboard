@@ -88,7 +88,7 @@
                     </view>
                     <connections>
                         <outlet property="indicatorView" destination="kxC-Sg-c14" id="vIy-Fs-b7g"/>
-                        <outlet property="tableView" destination="2rn-fw-kAe" id="ImP-qm-eIH"/>
+                        <outlet property="tableView" destination="2rn-fw-kAe" id="o9Q-sQ-JuY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

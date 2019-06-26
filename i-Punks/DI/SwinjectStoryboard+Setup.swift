@@ -36,6 +36,10 @@ extension SwinjectStoryboard {
                 let useCase = resolver.resolve(BeerUseCase.self)!
                 return BeerListViewModel(useCase: useCase)
             }
+            container.register(BeerDetailViewModel.self) { resolver in
+                let useCase = resolver.resolve(BeerUseCase.self)!
+                return BeerDetailViewModel(useCase: useCase)
+            }
         }
     }
 
@@ -43,6 +47,9 @@ extension SwinjectStoryboard {
         func assemble(container: Container) {
             container.storyboardInitCompleted(BeerListViewController.self) { resolver, vc in
                 vc.viewModel = resolver.resolve(BeerListViewModel.self)!
+            }
+            container.storyboardInitCompleted(BeerDetailViewController.self) { resolver, vc in
+                vc.viewModel = resolver.resolve(BeerDetailViewModel.self)
             }
         }
     }

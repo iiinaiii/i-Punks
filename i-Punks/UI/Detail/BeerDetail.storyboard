@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HDa-W1-bhQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Beer Detail View Controller-->
+        <scene sceneID="VXJ-qQ-m7s">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="HDa-W1-bhQ" customClass="BeerDetailViewController" customModule="i_Punks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qwl-uF-mq5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="BeerNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARf-vO-He1">
+                                <rect key="frame" x="20" y="339" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="TaglineLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgX-nq-zev">
+                                <rect key="frame" x="20" y="368" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LgX-nq-zev" firstAttribute="leading" secondItem="ARf-vO-He1" secondAttribute="leading" id="7u8-HA-PUI"/>
+                            <constraint firstItem="ARf-vO-He1" firstAttribute="trailing" secondItem="LgX-nq-zev" secondAttribute="trailing" id="L7j-zG-3BV"/>
+                            <constraint firstItem="ARf-vO-He1" firstAttribute="leading" secondItem="Ge2-x5-N1K" secondAttribute="leading" constant="20" id="dN2-rE-aL4"/>
+                            <constraint firstItem="LgX-nq-zev" firstAttribute="leading" secondItem="ARf-vO-He1" secondAttribute="leading" id="tqM-Cu-mU1"/>
+                            <constraint firstItem="Ge2-x5-N1K" firstAttribute="trailing" secondItem="ARf-vO-He1" secondAttribute="trailing" constant="20" id="yrW-Z8-HuM"/>
+                            <constraint firstItem="LgX-nq-zev" firstAttribute="top" secondItem="ARf-vO-He1" secondAttribute="bottom" id="zMc-Ds-70P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ge2-x5-N1K"/>
+                    </view>
+                    <connections>
+                        <outlet property="beerNameLabel" destination="ARf-vO-He1" id="Si8-J4-0aQ"/>
+                        <outlet property="taglineLabel" destination="LgX-nq-zev" id="L7m-ja-4vh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gOY-Ks-PCS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3" y="497"/>
+        </scene>
+    </scenes>
+</document>

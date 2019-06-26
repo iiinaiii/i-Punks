@@ -14,15 +14,11 @@ class BeerApi: BeerDataSource {
                     case .success(let beerResponseList):
                         let beerList = beerResponseList.map({ $0.toBeer() })
                         singleEvent(.success(Result.success(beerList)))
-                    case .failure(let error):
-                        print("failure: \(error)")
-                        singleEvent(.error(ApiError()))
+                    case .failure(_):
+                        singleEvent(.error(PunksError.apiError))
                     }
             }
             return Disposables.create { request.cancel() }
         }
     }
-}
-
-class ApiError: Error {
 }

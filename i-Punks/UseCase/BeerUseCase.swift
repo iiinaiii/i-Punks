@@ -12,7 +12,15 @@ class BeerUseCase {
         repository.fetchBeerList(page: page)
     }
 
-    func observeBeerList() -> Observable<Array<Beer>> {
+    func fetchBeerDetail(beerId: Int) {
+        repository.fetchBeerDetail(beerId: beerId)
+    }
+
+    func observeBeerDetail() -> Observable<Result<Beer, Error>> {
+        repository.observeBeerDetail()
+    }
+
+    func observeBeerList() -> Observable<Result<Array<Beer>, Error>> {
         repository.observeBeerList()
     }
 }

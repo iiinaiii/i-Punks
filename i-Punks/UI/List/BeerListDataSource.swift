@@ -4,10 +4,17 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class BeerListDataSource: NSObject, UITableViewDataSource, RxTableViewDataSourceType {
-
+class BeerListDataSource: NSObject, UITableViewDataSource,  UITableViewDelegate, RxTableViewDataSourceType {
+    
+    typealias ItemSelected = (Beer) -> Void
+    private let _itemSelected:ItemSelected
+    
     typealias Element = [Beer]
-    var _beers: [Beer] = []
+    private var _beers: Element = []
+    
+    init(itemSelected: @escaping ItemSelected) {
+        self._itemSelected = itemSelected
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return _beers.count
@@ -42,6 +49,11 @@ class BeerListDataSource: NSObject, UITableViewDataSource, RxTableViewDataSource
             dataSource._beers = beers
             tableView.reloadData()
         }.on(observedEvent)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        _itemSelected(_beers[indexPath.row])
     }
 
     private func getImageByUrl(url: String) -> UIImage {

@@ -3,8 +3,12 @@ import RxSwift
 
 class BeerRepository {
     let dataSource: BeerDataSource
+
     let disposeBag = DisposeBag()
-    private let beerListSubject = PublishSubject<Array<Beer>>()
+
+    private var beerCache: [Int: Beer] = [:]
+    private let beerListSubject = PublishSubject<Result<Array<Beer>, Error>>()
+    private let beerDetailSubject = PublishSubject<Result<Beer, Error>>()
 
     init(dataSource: BeerDataSource) {
         self.dataSource = dataSource
@@ -17,18 +21,36 @@ class BeerRepository {
                 onSuccess: { result in
                     switch result {
                     case .success(let beerList):
-                        self.beerListSubject.onNext(beerList)
-                    case .failure(let error):
-                        self.beerListSubject.onError(error)
+                        self.cache(beerList: beerList)
+                    case .failure(_):
+                        break
                     }
-
+                    self.beerListSubject.onNext(result)
                 },
                 onError: { error in
-                    self.beerListSubject.onError(error)
+                    self.beerListSubject.onNext(Result.failure(error))
                 }).disposed(by: disposeBag)
     }
 
-    func observeBeerList() -> Observable<Array<Beer>> {
+    func fetchBeerDetail(beerId: Int) {
+        if let beer = beerCache[beerId] {
+            beerDetailSubject.onNext(Result.success(beer))
+        } else {
+            beerDetailSubject.onNext(Result.failure(PunksError.detailError))
+        }
+    }
+
+    func observeBeerList() -> Observable<Result<Array<Beer>, Error>> {
         return beerListSubject.asObservable()
+    }
+
+    func observeBeerDetail() -> Observable<Result<Beer, Error>> {
+        return beerDetailSubject.asObservable()
+    }
+
+    private func cache(beerList: Array<Beer>) {
+        beerList.forEach { beer in
+            self.beerCache[beer.id] = beer
+        }
     }
 }
