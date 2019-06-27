@@ -27,7 +27,7 @@ class BeerListDataSource: NSObject, UITableViewDataSource,  UITableViewDelegate,
         // image
         if let imageUrl = beer.imageUrl {
             let imageView = cell.viewWithTag(1) as! UIImageView
-            imageView.image = self.getImageByUrl(url: imageUrl)
+            imageView.image = UIImage(url: imageUrl)
         }
 
         // name
@@ -54,16 +54,5 @@ class BeerListDataSource: NSObject, UITableViewDataSource,  UITableViewDelegate,
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         _itemSelected(_beers[indexPath.row])
-    }
-
-    private func getImageByUrl(url: String) -> UIImage {
-        let url = URL(string: url)
-        do {
-            let data = try Data(contentsOf: url!)
-            return UIImage(data: data)!
-        } catch let err {
-            print("Error : \(err.localizedDescription)")
-        }
-        return UIImage()
     }
 }

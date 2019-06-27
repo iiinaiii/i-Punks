@@ -42,8 +42,8 @@ class BeerListViewController: UIViewController, BeerListNavigator {
     }
 
     func toBeerDetail(beerId: Int) {
-        let vc = BeerDetailViewController.newInstance(beerId: beerId)
-        present(vc, animated: true, completion: nil)
+        let nc = BeerDetailViewController.createNavigationController(beerId: beerId)
+        present(nc, animated: true, completion: nil)
     }
 
 }

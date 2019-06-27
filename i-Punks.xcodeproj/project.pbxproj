@@ -31,6 +31,7 @@
 		3AAD0C6722C26A4C001F3152 /* PunksError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD0C6622C26A4C001F3152 /* PunksError.swift */; };
 		3AAD0C6922C327B5001F3152 /* LoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD0C6822C327B5001F3152 /* LoadState.swift */; };
 		3AAD0C6B22C32B9B001F3152 /* BeerListNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD0C6A22C32B9B001F3152 /* BeerListNavigator.swift */; };
+		3AAD0C6D22C48462001F3152 /* UIImage+LoadUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAD0C6C22C48462001F3152 /* UIImage+LoadUrl.swift */; };
 		3ADE0D8E22BAA6080011DEEB /* BeerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE0D8D22BAA6080011DEEB /* BeerUseCase.swift */; };
 		3ADE0D9022BAA6450011DEEB /* BeerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE0D8F22BAA6450011DEEB /* BeerRepository.swift */; };
 		3ADE0D9222BAA6800011DEEB /* BeerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE0D9122BAA6800011DEEB /* BeerDataSource.swift */; };
@@ -99,6 +100,7 @@
 		3AAD0C6622C26A4C001F3152 /* PunksError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunksError.swift; sourceTree = "<group>"; };
 		3AAD0C6822C327B5001F3152 /* LoadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadState.swift; sourceTree = "<group>"; };
 		3AAD0C6A22C32B9B001F3152 /* BeerListNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListNavigator.swift; sourceTree = "<group>"; };
+		3AAD0C6C22C48462001F3152 /* UIImage+LoadUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+LoadUrl.swift"; sourceTree = "<group>"; };
 		3ADE0D8D22BAA6080011DEEB /* BeerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerUseCase.swift; sourceTree = "<group>"; };
 		3ADE0D8F22BAA6450011DEEB /* BeerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRepository.swift; sourceTree = "<group>"; };
 		3ADE0D9122BAA6800011DEEB /* BeerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDataSource.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				3A0A408522B95464002199DF /* Detail */,
 				3A0A408422B95395002199DF /* List */,
 				3AAD0C6822C327B5001F3152 /* LoadState.swift */,
+				3AAD0C6C22C48462001F3152 /* UIImage+LoadUrl.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -322,6 +325,9 @@
 		3A0A405122B91C39002199DF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					BeerImage,
+				);
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Naoki Ishii";
@@ -411,6 +417,7 @@
 				3A29940022BE9A70009016C9 /* SwinjectStoryboard+Setup.swift in Sources */,
 				3ADE0D9722BAA9610011DEEB /* Beer.swift in Sources */,
 				3AAD0C6522C25813001F3152 /* BeerDetailViewModel.swift in Sources */,
+				3AAD0C6D22C48462001F3152 /* UIImage+LoadUrl.swift in Sources */,
 				3A0A406122B91C39002199DF /* BeerListViewController.swift in Sources */,
 				3AAD0C6722C26A4C001F3152 /* PunksError.swift in Sources */,
 				3AAD0C6B22C32B9B001F3152 /* BeerListNavigator.swift in Sources */,

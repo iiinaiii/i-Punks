@@ -20,9 +20,17 @@ final class BeerDetailViewModel {
                 throw error
             }
     }
+    lazy var beerImageUrl: Driver<String> = _beerDetail.map { $0.imageUrl! }
+        .asDriver(onErrorDriveWith: Driver.empty())
     lazy var beerName: Driver<String> = _beerDetail.map { $0.name }
         .asDriver(onErrorDriveWith: Driver.empty())
     lazy var tagline: Driver<String> = _beerDetail.map { $0.tagline }
+        .asDriver(onErrorDriveWith: Driver.empty())
+    lazy var abv: Driver<String> = _beerDetail.map { $0.abv }
+        .asDriver(onErrorDriveWith: Driver.empty())
+    lazy var ibu: Driver<String> = _beerDetail.map { $0.ibu }
+        .asDriver(onErrorDriveWith: Driver.empty())
+    lazy var og: Driver<String> = _beerDetail.map { $0.targetOg }
         .asDriver(onErrorDriveWith: Driver.empty())
 
     init(useCase: BeerUseCase) {
