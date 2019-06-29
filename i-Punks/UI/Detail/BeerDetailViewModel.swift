@@ -32,6 +32,12 @@ final class BeerDetailViewModel {
         .asDriver(onErrorDriveWith: Driver.empty())
     lazy var og: Driver<String> = _beerDetail.map { $0.targetOg }
         .asDriver(onErrorDriveWith: Driver.empty())
+    lazy var description: Driver<String> = _beerDetail.map { $0.description }
+        .asDriver(onErrorDriveWith: Driver.empty())
+    lazy var foodPairing: Driver<String> = _beerDetail.map { $0.foodPairing.joined(separator: "\n") }
+        .asDriver(onErrorDriveWith: Driver.empty())
+    lazy var brewersTips: Driver<String> = _beerDetail.map { $0.brewersTips }
+        .asDriver(onErrorDriveWith: Driver.empty())
 
     init(useCase: BeerUseCase) {
         self.useCase = useCase

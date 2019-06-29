@@ -21,6 +21,9 @@ class BeerDetailViewController: UIViewController {
     @IBOutlet weak var abvValue: UILabel!
     @IBOutlet weak var ibuValue: UILabel!
     @IBOutlet weak var ogValue: UILabel!
+    @IBOutlet weak var beerDescriptionBody: UILabel!
+    @IBOutlet weak var foodPairingBody: UILabel!
+    @IBOutlet weak var brewersTips: UILabel!
 
     override func viewDidLoad() {
         setupViewBinding()
@@ -53,6 +56,21 @@ class BeerDetailViewController: UIViewController {
             .disposed(by: disposeBag)
         viewModel?.og
             .drive(ogValue.rx.text)
+            .disposed(by: disposeBag)
+
+        // description
+        viewModel?.description
+            .drive(beerDescriptionBody.rx.text)
+            .disposed(by: disposeBag)
+
+        // food pairing
+        viewModel?.foodPairing
+            .drive(foodPairingBody.rx.text)
+            .disposed(by: disposeBag)
+
+        // brewer's tips
+        viewModel?.brewersTips
+            .drive(brewersTips.rx.text)
             .disposed(by: disposeBag)
     }
 }
