@@ -42,8 +42,10 @@ class BeerListViewController: UIViewController, BeerListNavigator {
     }
 
     func toBeerDetail(beerId: Int) {
-        let nc = BeerDetailViewController.createNavigationController(beerId: beerId)
-        present(nc, animated: true, completion: nil)
+//        let nc = BeerDetailViewController.createNavigationController(beerId: beerId)
+//        present(nc, animated: true, completion: nil)
+        let vc = BeerDetailViewController.createViewController(beerId: beerId)
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }

@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Beer Detail View Controller-->
+        <!--Title-->
         <scene sceneID="VXJ-qQ-m7s">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="HDa-W1-bhQ" customClass="BeerDetailViewController" customModule="i_Punks" customModuleProvider="target" sceneMemberID="viewController">
@@ -178,7 +178,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ge2-x5-N1K"/>
                     </view>
-                    <navigationItem key="navigationItem" id="buA-ZC-cvb"/>
+                    <navigationItem key="navigationItem" title="Title" leftItemsSupplementBackButton="YES" id="buA-ZC-cvb"/>
                     <connections>
                         <outlet property="abvValue" destination="Ujf-5g-ZjI" id="Zed-Y8-X3O"/>
                         <outlet property="beerDescriptionBody" destination="fuI-X0-J6N" id="Hbx-Cw-o3m"/>

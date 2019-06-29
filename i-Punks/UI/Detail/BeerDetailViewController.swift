@@ -1,15 +1,15 @@
 import UIKit
 import RxSwift
 
-class BeerDetailViewController: UIViewController {
+class BeerDetailViewController: UIViewController, BeerDetailNavigator {
 
-    static func createNavigationController(beerId: Int) -> UINavigationController {
+    static func createViewController(beerId: Int) -> UIViewController {
         let storyBoard = UIStoryboard(name: "BeerDetail", bundle: nil)
         let nc = storyBoard.instantiateViewController(withIdentifier: "beerDetailNavigationController") as! UINavigationController
-        (nc.topViewController as! BeerDetailViewController).beerId = beerId
-        return nc
+        let vc = (nc.topViewController as! BeerDetailViewController)
+        vc.beerId = beerId
+        return vc
     }
-
 
     private var beerId: Int!
     var viewModel: BeerDetailViewModel?
@@ -40,6 +40,9 @@ class BeerDetailViewController: UIViewController {
         // name
         viewModel?.beerName
             .drive(beerNameLabel.rx.text)
+            .disposed(by: disposeBag)
+        viewModel?.beerName
+            .drive(navigationItem.rx.title)
             .disposed(by: disposeBag)
 
         // tagline
@@ -72,5 +75,9 @@ class BeerDetailViewController: UIViewController {
         viewModel?.brewersTips
             .drive(brewersTips.rx.text)
             .disposed(by: disposeBag)
+    }
+
+    func backPage() {
+        navigationController?.popViewController(animated: true)
     }
 }
