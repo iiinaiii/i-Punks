@@ -12,7 +12,9 @@ Sample repository for learning iOS MVVM pattern.
 ### Layered architecture
 * Model layer is divided into three, UseCase/Domain/Infra, according to each responsibility.
 
-### Rx/DI
+### Rx
 * RxSwift is used to expose data in the `Model` layer
 * RxCocoa is used to pass data from `ViewModel` to `View`
+
+### DI
 * Each layer instance is injected by DI framework (Swinject https://github.com/Swinject/Swinject)
