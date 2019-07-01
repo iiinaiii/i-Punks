@@ -7,7 +7,7 @@ extension SwinjectStoryboard {
     class InfraAssembly: Assembly {
         func assemble(container: Container) {
             container.register(BeerDataSource.self) { _ in
-                return BeerApi()
+                return BeerApiService()
             }.inObjectScope(.container)
         }
     }

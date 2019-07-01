@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Beer List View Controller-->
+        <!--Beer List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="BeerListViewController" customModule="i_Punks" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,7 +86,7 @@
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WhM-c2-gEB"/>
+                    <navigationItem key="navigationItem" title="Beer List" id="WhM-c2-gEB"/>
                     <connections>
                         <outlet property="indicatorView" destination="kxC-Sg-c14" id="vIy-Fs-b7g"/>
                         <outlet property="tableView" destination="2rn-fw-kAe" id="o9Q-sQ-JuY"/>

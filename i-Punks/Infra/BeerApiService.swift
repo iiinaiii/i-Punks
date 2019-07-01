@@ -3,7 +3,7 @@ import Foundation
 import RxSwift
 import Alamofire
 
-class BeerApi: BeerDataSource {
+class BeerApiService: BeerDataSource {
     func searchBeerList(page: Int) -> Single<Result<Array<Beer>, Error>> {
         return Single<Result<Array<Beer>, Error>>.create { singleEvent in
             let request = AF.request("https://api.punkapi.com/v2/beers",
