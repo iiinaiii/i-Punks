@@ -2,6 +2,9 @@
 
 Sample repository for learning iOS MVVM pattern.
 
+<img src="https://user-images.githubusercontent.com/16633277/60641146-80205980-9e65-11e9-85a1-612176bf9555.png" width="300px">
+<img src="https://user-images.githubusercontent.com/16633277/60641154-8adaee80-9e65-11e9-8b9a-ac18309ab287.png" width="300px">
+
 # Architecture overview
 ## MVVM + Layerd architecture
 <img src="https://user-images.githubusercontent.com/16633277/60410898-55d06100-9c05-11e9-897f-e2555aa1067a.png" width="480px">
