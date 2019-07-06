@@ -20,7 +20,6 @@
 		3A2993FC22BE923B009016C9 /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2993FB22BE923B009016C9 /* SwinjectStoryboard.framework */; };
 		3A2993FD22BE923B009016C9 /* SwinjectStoryboard.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2993FB22BE923B009016C9 /* SwinjectStoryboard.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3A29940022BE9A70009016C9 /* SwinjectStoryboard+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2993FF22BE9A70009016C9 /* SwinjectStoryboard+Setup.swift */; };
-		3A4D6B9522C77B2200D65ADF /* BeerDetailNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D6B9422C77B2200D65ADF /* BeerDetailNavigator.swift */; };
 		3AAC575F22BF30280082C533 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAC575E22BF30280082C533 /* RxCocoa.framework */; };
 		3AAC576022BF30280082C533 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAC575E22BF30280082C533 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3AAC576222BF311E0082C533 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAC576122BF311D0082C533 /* RxRelay.framework */; };
@@ -92,7 +91,6 @@
 		3A2993F822BE9222009016C9 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		3A2993FB22BE923B009016C9 /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
 		3A2993FF22BE9A70009016C9 /* SwinjectStoryboard+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Setup.swift"; sourceTree = "<group>"; };
-		3A4D6B9422C77B2200D65ADF /* BeerDetailNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailNavigator.swift; sourceTree = "<group>"; };
 		3AAC575E22BF30280082C533 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		3AAC576122BF311D0082C533 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		3AAD0C5E22C242C0001F3152 /* BeerListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListDataSource.swift; sourceTree = "<group>"; };
@@ -211,7 +209,6 @@
 				3AAD0C6022C256F6001F3152 /* BeerDetail.storyboard */,
 				3AAD0C6222C257C0001F3152 /* BeerDetailViewController.swift */,
 				3AAD0C6422C25813001F3152 /* BeerDetailViewModel.swift */,
-				3A4D6B9422C77B2200D65ADF /* BeerDetailNavigator.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -415,7 +412,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A4D6B9522C77B2200D65ADF /* BeerDetailNavigator.swift in Sources */,
 				3AAD0C5F22C242C0001F3152 /* BeerListDataSource.swift in Sources */,
 				3ADE0D9422BAA8F50011DEEB /* BeerApiService.swift in Sources */,
 				3A29940022BE9A70009016C9 /* SwinjectStoryboard+Setup.swift in Sources */,

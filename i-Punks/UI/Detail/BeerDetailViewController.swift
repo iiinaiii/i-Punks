@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-class BeerDetailViewController: UIViewController, BeerDetailNavigator {
+class BeerDetailViewController: UIViewController {
 
     static func createViewController(beerId: Int) -> UIViewController {
         let storyBoard = UIStoryboard(name: "BeerDetail", bundle: nil)
@@ -75,9 +75,5 @@ class BeerDetailViewController: UIViewController, BeerDetailNavigator {
         viewModel?.brewersTips
             .drive(brewersTips.rx.text)
             .disposed(by: disposeBag)
-    }
-
-    func backPage() {
-        navigationController?.popViewController(animated: true)
     }
 }
